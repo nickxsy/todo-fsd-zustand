@@ -1,5 +1,3 @@
-import { sleep } from '@/shared/utils';
-
 const BASE_URL = import.meta.env.VITE_BASE_URL + '/todos';
 
 export const todosApi = {
@@ -10,9 +8,6 @@ export const todosApi = {
       });
 
       if (!res.ok) throw new Error(`Ошибка: ${res.status}`);
-
-      // Задержка для симуляции загрузки
-      await sleep(200);
 
       return await res.json();
     } catch (error) {
