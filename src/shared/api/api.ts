@@ -1,6 +1,6 @@
 import { sleep } from '@/shared/utils';
 
-const BASE_URL = 'http://localhost:8000/todos';
+const BASE_URL = import.meta.env.VITE_BASE_URL + '/todos';
 
 export const todosApi = {
   getTodos: async (params?: string) => {
